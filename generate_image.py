@@ -13,7 +13,7 @@ model_id = "amazon.titan-image-generator-v1"
 bucket_name = "pgr301-couch-explorers"
 
 # Frank; Important; Change this prompt to something else before the presentation with the investors!
-prompt = "A fat man with glasses, bear and halo, in a white toga. Standing ontop of a roman architecture inspired pillar, at the top of the heavens, with a clear blue sky behind him and the sun shining down. He looks very intelligent and in a praise pose"
+prompt = "A pengiun standing with a fish in its mouth, looking very happy in the artic. It got a cartoony look and its snow around him"
 
 seed = random.randint(0, 2147483647)
 s3_image_path = f"20/generated_images/titan_{seed}.png"
