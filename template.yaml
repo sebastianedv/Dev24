@@ -17,8 +17,8 @@ Resources:
     Properties:
       Handler: app.lambda_handler
       Runtime: python3.8  
-      CodeUri:  
-      Timeout: 20
+      CodeUri: image_generator/
+      Timeout: 30
       Environment:
         Variables:
           S3_BUCKET_NAME: "pgr301-couch-explorers"
