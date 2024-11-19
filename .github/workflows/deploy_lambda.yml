@@ -13,6 +13,13 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
+        with:
+        token: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }}
+          ref: main
+          fetch-depth: 0
+
+      - name: Verify Git Remote
+        run: git remote -v
 
       - name: Set up Python
         uses: actions/setup-python@v4
