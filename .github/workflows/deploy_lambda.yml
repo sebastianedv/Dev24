@@ -51,3 +51,4 @@ jobs:
             --stack-name my-sam-stack \
             --capabilities CAPABILITY_IAM \
             --region ${{ secrets.AWS_REGION }}
+            --s3-bucket pgr301-couch-explorers
