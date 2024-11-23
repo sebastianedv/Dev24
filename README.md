@@ -1,5 +1,9 @@
 # Readme file
 
+For å kontrollere bilder som er generert -> pgr301-couch-explorer/20/generate_images/*
+CloudWatch logs: log groups -> /aws/lambda/image-generator-lambda-20
+SQS-queue: -> queues -> image-generation-queue-20
+
 ## Oppgave 1
 Oppgave 1 to do - Fjerne hardkodet bucketnavn fra generate_image.py
 
@@ -10,4 +14,4 @@ For oppgave 1, del B:
 Vellykket Github workflow action som har deployet SAM-applikasjonen til AWS: 
 https://github.com/sebastianedv/Dev24/actions/runs/11914764717
 
-Editaa
+Oppgave 2
