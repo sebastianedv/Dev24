@@ -18,6 +18,7 @@ https://github.com/sebastianedv/Dev24/actions/runs/11914764717
 
 * husk:
 * cd intra -> terraform init -> terraform apply
+
 For å teste sqs kø, eksempel:
 - aws sqs send-message \
   --queue-url https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-20 \
