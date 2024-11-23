@@ -31,9 +31,11 @@ jobs:
           terraform_version: 1.5.7
 
       - name: Terraform Init
+        working-directory: infra
         run: terraform init
 
       - name: Terraform Plan or Apply
+        working-directory: infra
         run: |
           if [ "${{ github.ref_name }}" == "main" ]; then
             terraform apply -auto-approve
