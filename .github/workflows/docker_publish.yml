@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
+        with:
+            fetch-depth: 0
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
@@ -25,7 +27,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/java-sqs-client:latest .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/java-sqs-client:latest ./java_sqs_client
 
       - name: Tag Docker Image
         run: |
