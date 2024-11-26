@@ -7,7 +7,7 @@
 For oppgave 1 & 2 så har det vært litt latskap i bildet, som har ført til litt uryddig filstruktur. Dette har ført til at app.py, generate_image.py og litt forskjellig rusk har havnet i root av prosjektet.
 
 ## Oppgave 1
-# **Oppgave 1 to do - Fjerne hardkodet bucketnavn fra generate_image.py**
+
 
 * HTTP endepunkt for testing av bildegenerering: https://bjocwmo11b.execute-api.eu-west-1.amazonaws.com/Prod/generate-image
 Har selv brukt postman for å teste dette, funket fint for meg.
@@ -40,11 +40,11 @@ Latest: er en kort og enkel beskrivelse av imaget, altså siste versjon. Hadde d
 
 ## Oppgave 5
 
-** 1.) Automatisering og kontinuerlig levering (CI/CD)**
+**1.) Automatisering og kontinuerlig levering (CI/CD)**
 
 Her har jeg dessverre ikke kommet frem til noe svar.
 
-** 2.) Overvability(overvåkning) **
+**2.) Overvability(overvåkning)**
 
 Serverløse applikasjoner har som oftest innebygde verktøy som AWS CloudWatch for logging og overvåkning. Dette funker godt for individuelle funksjoner, men kan være vanskeligere å spore hvordan dataen flyter.
 
@@ -53,7 +53,7 @@ Disse tilbyr med kontroll og fleksibilitet, på bekostning av at oppsettet tar m
 Fordelen her, er at logging og feilsøkningsmulighetene ofte er større.
 
 
-** 3.)  Skalerbarhet og kostnadskontroll **
+**3.)  Skalerbarhet og kostnadskontroll**
 
 Serverløs arkitektur skalerer automatisk etter behov og faktureres basert på bruk. Dette kan gjøre det kostnadseffektiv om man har variabel trafikk, men kan bli dyrt om man har høy trafikk eller skal skalere det mye større.
 
@@ -61,7 +61,7 @@ Ved bruk av mikrotjenester, så skalerer man hele tjenester. Dette kan tilby bed
 Verdt å merke at dette også har sine økonomiske ulemper med at man BØR ha ressurser tilgjengelig hele tiden. F.eks nattevakter som passer på at alt kjører døgnet rundt.
 
 
-** 4.) Eierskap og ansvar **
+**4.) Eierskap og ansvar**
 
 I serverløs arkitektur tar skyleverandøren av seg deler av infrastrukturen når det kommer til skalering, oppdatering og tilgjengelighet.
 Dette reduserer teamets ansvar, men gir mindre kontroll over produktet og fører til en avhengighet av leverandøren.
