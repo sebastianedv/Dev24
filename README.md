@@ -23,3 +23,15 @@ For å teste sqs kø, eksempel:
 - aws sqs send-message \
   --queue-url https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-20 \
   --message-body "a sunset over the misty mountains, with a hint of snow"
+
+
+## Oppgave 3
+
+### Dockerhub: 
+
+- dockerfordevopseksamen/java-sqs-client
+- SQS url: https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-20
+
+### Beskrivelse av taggestrategi:
+
+Latest: er en kort og enkel beskrivelse av imaget, altså siste versjon. Hadde dette vært et større, reelt prosjekt, så hadde det heller blitt benyttet 1.0.0/1.1.0/2.0.0 osv for å lettere kunne skildre patches på prosjektet.
