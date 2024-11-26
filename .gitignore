@@ -50,3 +50,6 @@ output.txt       # Example output files
 # Docker specific (if using Docker)
 docker-compose.override.yml
 *.env
+**/Dockerfile
+**/.docker
+**/target
