@@ -35,3 +35,21 @@ For å teste sqs kø, eksempel:
 ### Beskrivelse av taggestrategi:
 
 Latest: er en kort og enkel beskrivelse av imaget, altså siste versjon. Hadde dette vært et større, reelt prosjekt, så hadde det heller blitt benyttet 1.0.0/1.1.0/2.0.0 osv for å lettere kunne skildre patches på prosjektet.
+
+
+## Oppgave 5
+
+** 1.) Automatisering og kontinuerlig levering (CI/CD)**
+
+** 2.) Overvability(overvåkning) **
+
+Serverløse applikasjoner har som oftest innebygde verktøy som AWS CloudWatch for logging og overvåkning. Dette funker godt for individuelle funksjoner, men kan være vanskeligere å spore hvordan dataen flyter.
+
+I mikrotjenester så kan man bruke mer etablerte verktøy som Prometheus eller Grafana. 
+Disse tilbyr med kontroll og fleksibilitet, på bekostning av at oppsettet tar mer tid og krever mer vedlikehold. 
+Fordelen her, er at logging og feilsøkningsmulighetene ofte er større.
+
+
+** 3.)  Skalerbarhet og kostnadskontroll **
+
+** 4.) Eierskap og ansvar **
