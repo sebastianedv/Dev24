@@ -2,6 +2,7 @@ import base64
 import boto3
 import json
 import random
+import os
 
 # Set up the AWS clients
 
@@ -10,13 +11,14 @@ s3_client = boto3.client("s3")
 
 # Define the model ID and S3 bucket name (replace with your actual bucket name)
 model_id = "amazon.titan-image-generator-v1"
-bucket_name = "pgr301-couch-explorers"
+bucket_name = os.environ.get("S3_BUCKET_NAME")
+bucket_number = os.environ.get("BUCKET_NUMBER")
 
 # Frank; Important; Change this prompt to something else before the presentation with the investors!
 prompt = "A pengiun standing with a fish in its mouth, looking very happy in the artic. It got a cartoony look and its snow around him"
 
 seed = random.randint(0, 2147483647)
-s3_image_path = f"20/generated_images/titan_{seed}.png"
+s3_image_path = f"{bucket_number}/generated_images/titan_{seed}.png"
 
 native_request = {
     "taskType": "TEXT_IMAGE",
