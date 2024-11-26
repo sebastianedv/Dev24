@@ -79,3 +79,30 @@ resource "aws_lambda_event_source_mapping" "sqs_event" {
   function_name    = aws_lambda_function.image_generator_lambda_20.arn
   batch_size       = 10
 }
+
+resource "aws_sns_topic" "queue_alarm_topic" {
+  name = "sqs-queue-alarm-topic-20"
+}
+
+resource "aws_sns_topic_subscription" "email_subscription" {
+  topic_arn = aws_sns_topic.queue_alarm_topic.arn
+  protocol  = "email"
+  endpoint  = "sebastian_edvardsen@hotmail.com" 
+}
+
+
+resource "aws_cloudwatch_metric_alarm" "oldest_message_alarm" {
+  alarm_name          = "ApproximateAgeOfOldestMessageHigh-20"
+  comparison_operator = "GreaterThanOrEqualToThreshold"
+  evaluation_periods  = 1
+  metric_name         = "ApproximateAgeOfOldestMessage"
+  namespace           = "AWS/SQS"
+  period              = 60
+  statistic           = "Maximum"
+  threshold           = 60 
+  alarm_description   = "Triggers when the oldest message in the SQS queue is too old"
+  alarm_actions       = [aws_sns_topic.queue_alarm_topic.arn]
+  dimensions = {
+    QueueName = aws_sqs_queue.image_queue.name
+  }
+}
